@@ -1,0 +1,47 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+  margin: 70px 40px;
+}
+.grid-item {
+  font-size: 30px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h6{
+    text-align: justify;
+    padding-left:30px ;
+}
+h4{
+  color:white;
+  text-align:center;
+  margin-top:10px;
+}
+button{
+    width: 80%;
+}
+mat-card{
+    padding-top: 30px;
+}
+.content{
+    display:inline;
+}
+@media (max-width: 600px) {
+  .grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 250px;
+    margin: auto;
+    margin-top: 50px !important;
+  }
+  .grid-item {
+    padding: 0px;
+    margin: auto;
+    width: 100%;
+    grid-column: 2;
+    grid-row: 10px;
+  }
+}

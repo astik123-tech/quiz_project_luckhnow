@@ -1,0 +1,47 @@
+input{
+    color: white;
+}
+mat-radio-button {
+    display: block;
+}
+.row{
+    margin-right:0px ;
+}
+mat-card{
+    margin-left: 0% !important;
+    margin-right: 0% !important;
+    padding-left:50px;
+}
+.padding{
+    padding:5%;
+}
+button{
+    margin:auto;
+}
+
+@media(max-width:500px){
+    .padding{
+        padding:0 !important;
+        padding-top: 50px !important;
+        
+    }
+    mat-card{
+        background-color: #242424 !important;
+    }
+}
+
+/* .time{
+    margin:auto;
+    margin-top: 10px !important;
+    background-color: white;
+    border-radius: 30px;
+    width: 100px;
+    height:  45px;
+    border: 2px white solid;
+    color: black;
+    text-align: center;
+    letter-spacing: 2.0px;
+    padding: 7px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+} */

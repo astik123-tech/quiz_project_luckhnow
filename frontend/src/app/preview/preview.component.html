@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-md-12">
+    <button routerLink="/completed" class="btn btn-danger question-button shadow">Back</button>
+  </div>
+</div>
+
+<div class="row" *ngFor="let i of question">
+    <div class="col-md-6 m-auto" *ngIf="i!==0">
+        <div>
+        <mat-card>
+            <h5 class=" text-center">{{i?.question}}</h5>
+            <div class="row d-flex justify-content-around mt-4 p-3">
+                <div class="col-md-6 text-center" [ngClass]="i.answer===i.CorrectAnswer ?'text-success':'text-danger'">{{i?.answer}}</div>
+                <div class="col-md-6 text-success text-center" *ngIf="i.answer !== i.CorrectAnswer" >{{i?.CorrectAnswer}}</div>
+                <div class="col-md-12 m-auto" *ngIf="i.explanation">
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true"
+                                             (closed)="panelOpenState = false">
+                          <mat-expansion-panel-header>
+                            <mat-panel-title>
+                              Explanation
+                            </mat-panel-title>
+                          </mat-expansion-panel-header>
+                          <p>{{i?.explanation}}</p>
+                        </mat-expansion-panel>
+                      </mat-accordion>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+    </div>
+</div>

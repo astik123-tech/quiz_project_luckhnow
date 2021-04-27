@@ -1,0 +1,12 @@
+
+<div class="row">
+    <div class="col-md-6 m-auto">
+        <form action="" [formGroup]="feedbackForm">
+            <mat-form-field class="example-full-width">
+                <mat-label>Feedback</mat-label>
+                <textarea matInput placeholder="comment..." formControlName="comment" ></textarea>
+              </mat-form-field>
+        </form>
+        <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+    </div>
+</div>

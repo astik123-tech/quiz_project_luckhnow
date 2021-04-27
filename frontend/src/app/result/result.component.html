@@ -1,0 +1,50 @@
+<!-- <div class="time" >
+  {{min}}:{{second}}
+</div>  -->
+<div class="row">
+  <div class="col-md-6 padding">
+    <mat-card>
+      <h4 class="text-center">Question's</h4>
+      <div class="form-group">
+        <h5>{{currentIndex + 1}}) {{"  "}} {{currentQuestion?.question}}</h5>
+        <div class="row mt-3">
+          <div class="col-md-5 text-center ">
+            <form class="form-check" [formGroup]="answerForm" >
+                <mat-radio-group aria-label="Select an option" formControlName="answer">
+                  <mat-radio-button [value]="currentQuestion?.optionOne">{{currentQuestion?.optionOne}}</mat-radio-button>
+                  <mat-radio-button [value]="currentQuestion?.optionTwo">{{currentQuestion?.optionTwo}}</mat-radio-button>
+                  <mat-radio-button [value]="currentQuestion?.optionThree">{{currentQuestion?.optionThree}}</mat-radio-button>
+                  <mat-radio-button [value]="currentQuestion?.optionFour" >{{currentQuestion?.optionFour}}</mat-radio-button>
+                </mat-radio-group>
+            </form>
+          </div>
+          <button class="w-75 mt-3" mat-flat-button color="primary" (click)="onSubmit()">Submit</button>
+        </div>
+      </div>
+    </mat-card>
+    <mat-card>
+      <mat-card-content align="center">
+        Total Score:- {{marksGain}}
+      </mat-card-content>
+      <!-- <mat-card-content align="center">
+        Rank:-
+      </mat-card-content> -->
+    </mat-card>
+
+  </div>
+  <div class="col-md-6 p-5">
+    <h1 class="text-center">Start quiz</h1>
+    <div class="form-group offset-2">
+      <mat-card>Author's: {{author_Name}} </mat-card>
+    </div>
+    <div class="form-group offset-2">
+      <mat-card>Quiz Name: {{contest_name}} </mat-card>
+    </div>
+    <div class="form-group offset-2">
+      <mat-card>No of Question's: {{number_of_questoin}}</mat-card>
+    </div>
+    <div class="form-group offset-2">
+      <mat-card>Durations: {{duration}} </mat-card>
+    </div>
+  </div>
+</div>

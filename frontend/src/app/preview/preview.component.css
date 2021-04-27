@@ -1,0 +1,36 @@
+h1 {
+  color: white;
+}
+
+.mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+mat-accordion {
+  box-shadow: none !important;
+}
+mat-expansion-panel {
+  box-shadow: none !important;
+}
+
+mat-card {
+  margin-top: 10px !important;
+}
+
+.question-button {
+  float: right;
+  margin-top: 20px;
+  margin-right: 20px;
+  width: 100px;
+}
+
+.shadow{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media(max-width:500px){
+   .row{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+}

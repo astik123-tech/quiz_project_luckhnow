@@ -1,0 +1,58 @@
+<div class="row" >
+  <div class="col-md-6 col-sm-12 col-xs-12 m-auto ">
+    <h3 class="text-center  mt-4" style="color: white;">Scheldule your Quiz</h3>
+    <form  class=" offset-3" [formGroup]="quizForm">
+
+      <div class="form-group">
+        <mat-form-field appearance="fill" class="w-75">
+          <mat-label>Author Name</mat-label>
+          <input matInput class="w-100" formControlName="author_Name">
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-form-field appearance="fill" class="w-75">
+          <mat-label>No of Questions</mat-label>
+          <mat-select formControlName="number_of_questoin">
+            <mat-option *ngFor="let num of question " [value]="num">
+              {{num}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-form-field appearance="fill" class="w-75">
+          <mat-label>Duration</mat-label>
+          <mat-select formControlName="duration">
+            <mat-option *ngFor="let a of duration " [value]="a">
+              {{a}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <button class="w-75" mat-flat-button color="primary" (click)="onSubmit()">Submit</button>
+    </form>
+  </div>
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <div class="alert-position">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Contest Key</th>
+          <th>Contest Name</th>
+          <th>Total Question</th>
+          <th>Duration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of contest">
+          <td>{{data.contentKey}}</td>
+          <td>{{data.contest_name}}</td>
+          <td>{{data.number_of_questoin}}</td>
+          <td>{{data.number_of_questoin}}</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>

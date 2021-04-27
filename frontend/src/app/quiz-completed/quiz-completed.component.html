@@ -1,0 +1,59 @@
+
+  <div class="row">
+    <div class="col-md-12">
+      <button routerLink="/preview" class="btn btn-danger question-button shadow">Questions</button>
+    </div>
+  </div>
+  <div class="row"> 
+    <div class="col-md-6 col-sm-12 col-xs-12">
+      <div class="row">
+        <div class="col-md-10 col-sm-12 col-xs-12 m-auto" style="text-align: center;">
+              <h4>QUIZ RESULT !</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-10 col-sm-12 col-xs-12 m-auto color">
+          <div class="grid-container">
+            <div class="grid-item"> <h6>Total Marks</h6> <br> <b> {{totalQuestion}}</b> </div>
+            <div class="grid-item"><h6>Correct Answers</h6><br>  <b>  {{marksGain}}</b></div>
+            <div class="grid-item"><h6>Wrong Answers</h6> <br>  <b> {{wrongAnswer}} </b> </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-10 col-sm-12 col-xs-12 bg-light m-auto shadow" >
+        <canvas baseChart
+          [datasets]="barChartData"
+          [options]="barChartOptions"
+          [legend]="barChartLegend"
+          [chartType]="barChartType">
+        </canvas>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-12 col-xs-12">
+      <div class="row">
+        <div class="col-md-10 col-sm-12 col-xs-12 m-auto" style="text-align: center;">
+          <h4>Ranking ({{total}})</h4>
+        </div>
+        <div class="col-md-10 col-sm-12 col-xs-12 margin  m-auto shadow">
+          <div class="grid-container head">
+            <div class="grid-item"> <h6>Rank </h6></div>
+            <div class="grid-item"><h6>Name</h6> </div>
+            <div class="grid-item"><h6>Marks </h6></div>
+          </div>
+          <hr/>
+          <div class="scroll">
+           <div *ngFor="let a of rank; let i = index">
+            <div class="grid-container content">
+              <div class="grid-item">{{i + 1}}</div>
+              <div class="grid-item">{{a?.user}}</div>
+              <div class="grid-item">{{a?.totalMarks}}</div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+

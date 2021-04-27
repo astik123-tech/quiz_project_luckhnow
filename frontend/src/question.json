@@ -1,0 +1,6 @@
+"question":"int a = 0; int b = a++ * a++ * a++ * a++ * a++ * a++ * a++;",
+"optionOne":"21"
+"optionTwo":"22",
+"optionThree":"0",
+"optionFour":"19",
+"CorrectAnswer":"21"

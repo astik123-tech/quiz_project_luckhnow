@@ -1,0 +1,26 @@
+mat-form-field{
+    width:750px !important ;
+    margin-top: 200px !important;
+    color:white
+}
+
+.row{
+    margin:0px  !important;;
+}
+
+@media(max-width:1200px){
+    mat-form-field{
+        width:550px !important ;
+        margin-top: 200px !important;
+    }
+}
+@media(max-width:600px){
+    mat-form-field{
+        margin-left:5% !important;
+        width:90% !important ;
+        margin-top: 200px !important;
+    }
+    button{
+        margin-left:5% !important;
+    }
+}

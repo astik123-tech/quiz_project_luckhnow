@@ -1,0 +1,68 @@
+.main {
+  margin-top: 50px;
+  margin-left: 20%;
+  margin-right: 20%;
+  box-shadow: 3px 3px 3px 3px grey;
+  height: auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+form {
+  margin: 30px 10px 10px 10px;
+}
+button {
+  margin-top: 10px;
+}
+small{
+    color:red
+}
+
+h3 {
+  text-align: center;
+  color: white;
+}
+
+.register {
+  display: block;
+  font-size: 14px;
+  text-align: right;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+label{
+  color:white
+}
+.register:hover{
+    color:#7B1FA2
+}
+.btn {
+  background-color: black;
+  height: 40px;
+  color: white;
+  width: 100%;
+}
+
+
+.btn:hover {
+  border: black solid 2px;
+  border-radius: 3px;
+  background-color: white;
+  color: black;
+  font-weight: 500;
+}
+input{
+  color:black
+}
+
+@media(max-width:500px){
+  .main{
+    margin:5px;
+    margin-top: 70px;
+    border: 1px solid white;
+    box-shadow: 3px 3px 3px 3px grey;
+    height: auto;
+    box-shadow: none;
+  }
+}

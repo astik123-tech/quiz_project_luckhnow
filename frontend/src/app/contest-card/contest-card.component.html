@@ -1,0 +1,15 @@
+
+<h4>Contest's</h4>
+<div class="grid-container">
+    <div class="grid-item" *ngFor="let a of contest">
+        <mat-card>
+            <div class="content">
+                <h6>Contest Key: {{a.contestkey}}</h6> 
+            </div>
+            <div>
+                <h6>Contest Name: {{a.contestName}}</h6> 
+            </div>
+            <button mat-flat-button color="primary" (click)="next_page(a.contestkey,a.contestName)"  >Next</button>
+        </mat-card>
+    </div>  
+  </div>

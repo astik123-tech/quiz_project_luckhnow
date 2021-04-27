@@ -1,0 +1,21 @@
+<div class="main">
+    <h3>Login</h3>
+    <form [formGroup]="loginForm">
+        <div class="row">
+            <div class="col-md-12">
+                <label for="">Email</label>
+                <input type="email" class="form-control" formControlName="email">
+                <small *ngIf="h.email.touched && h.email.errors && h.email.errors.required">Email is required</small>
+            </div>
+            <div class="col-md-12">
+                <label for="">Password</label>
+                <input type="password" class="form-control" formControlName="password">
+                <small *ngIf="h.password.errors && h.password.errors.minlength">Minimum 8 digit </small>
+                <small *ngIf="h.password.touched && h.password.errors && h.password.errors.required">Password is
+                    required</small>
+            </div>
+        </div>
+            <button mat-flat-button color="primary" (click)="onSubmit()">Submit</button>
+            <span class="register" (click)="onRegistration()">Don't have an account ? register here</span>
+    </form>
+</div>
